@@ -6,6 +6,7 @@
   font-family: Roboto, sans-serif;
 }
 
+
 .topBar {
   background-color: #fff;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
@@ -21,6 +22,8 @@
   padding: 15px 20px; /* Reduced padding */
 }
 
+
+
 .logo {
   font-size: 28px; /* Reduced font size */
   font-weight: 500;
@@ -31,25 +34,28 @@
   display: flex;
   min-width: 200px; /* Adjusted width */
   align-items: center;
-  gap: 20px; /* Reduced gap */
-  font-size: 14px; /* Reduced font size */
+  gap: 12px; /* Reduced gap */
+  font-size: 16 px; /* Reduced font size */
   font-weight: 400;
 }
 
 .navigation ul {
-  list-style-type: none;
   display: flex;
-  gap: 20px; /* Reduced gap */
-  padding: 0;
+  gap: 30px; /* Increased spacing between nav items */
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-
+.navigation ul li {
+  margin: 0 15px; /* Added margin to space out the list items */
+}
 
 .navigation a {
   color: #000;
   text-decoration: none;
 }
+
 
 .searchForm {
   display: flex;
@@ -281,6 +287,94 @@
   border: 0;
 }
 
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #000;
+}
+
+.profileName {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profileId {
+  font-size: 14px;
+  color: #555;
+}
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.popupProfileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #000;
+}
+
+.popupContent h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.popupContent p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.closeButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.closeButton:hover {
+  background-color: #cc0000;
+}
+
+
 @media (max-width: 991px) {
   .topBar,
   .logo,
@@ -311,5 +405,3 @@
     margin-top: 20px;
   }
 }
-
-

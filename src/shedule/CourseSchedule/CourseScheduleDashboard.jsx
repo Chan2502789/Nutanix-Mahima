@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./CourseScheduleDashboard.module.css";
-import TopBar from "./TopBar";
+import TopBar from "../../components/TopBar";
 import CourseSearch from "./CourseSearch";
 import CourseList from "./CourseList";
 

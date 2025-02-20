@@ -1,5 +1,5 @@
 import React from "react";
-import TopBar from "./TopBar";
+import TopBar from "../../components/TopBar";
 import Sidebar from "./Sidebar"; // Create this component
 import ProfileSection from "./ProfileSection"; // Create this component
 import ProfileDetails from "./ProfileDetails"; // Create this component

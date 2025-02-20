@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./LearnerDashboard.module.css";
+import { Link } from "react-router-dom";
+import styles from "./LearnerDashboard/LearnerDashboard.module.css";
 
 function TopBar() {
   return (
@@ -8,16 +9,16 @@ function TopBar() {
       <nav className={styles.navigation}>
         <ul>
           <li>
-            <a href="/home">Home</a>
+            <Link to="/" className={styles.navLink}>Home</Link>
           </li>
           <li>
-            <a href="/schedule">Schedule</a>
+            <Link to="/schedule" className={styles.navLink}>Schedule</Link>
           </li>
           <li>
-            <a href="/profile">Profile</a>
+            <Link to="/profile" className={styles.navLink}>Profile</Link>
           </li>
           <li>
-            <a href="#feedback">Feedback</a>
+            <a href="#feedback" className={styles.navLink}>Feedback</a>
           </li>
         </ul>
         <form className={styles.searchForm} role="search">
