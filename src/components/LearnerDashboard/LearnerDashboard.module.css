@@ -1,0 +1,315 @@
+.learnerScheduleDashboard {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+}
+
+.topBar {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+  display: flex;
+  min-height: 70px; /* Reduced height */
+  width: 100%;
+  align-items: center;
+  gap: 10px; /* Reduced gap */
+  overflow: hidden;
+  color: #000;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 20px; /* Reduced padding */
+}
+
+.logo {
+  font-size: 28px; /* Reduced font size */
+  font-weight: 500;
+  line-height: 1;
+}
+
+.navigation {
+  display: flex;
+  min-width: 200px; /* Adjusted width */
+  align-items: center;
+  gap: 20px; /* Reduced gap */
+  font-size: 14px; /* Reduced font size */
+  font-weight: 400;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px; /* Reduced gap */
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.navigation a {
+  color: #000;
+  text-decoration: none;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 150px; /* Reduced width */
+  padding: 6px; /* Adjusted padding */
+}
+
+
+
+.searchButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+}
+
+.searchIcon {
+  width: 16px; /* Reduced icon size */
+  height: 16px;
+}
+
+.mainContent {
+  display: flex;
+  width: 100%;
+  max-width: 1640px;
+}
+
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #000;
+  white-space: nowrap;
+  justify-content: start;
+  padding: 12px 0;
+}
+
+.sidebarItem {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+  padding: 12px 10px; /* Reduced padding */
+}
+
+.sidebarItem a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Reduced gap */
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  padding-right: 50px; /* Moves items further left */
+}
+
+
+
+.sidebarIcon {
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.6;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebarTitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.dashboardContent {
+  flex-grow: 1;
+  padding: 60px;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.profileImage {
+  width: 125px;
+  height: 125px;
+  border-radius: 70px;
+  object-fit: cover;
+}
+
+.profileInfo {
+  flex-grow: 1;
+}
+
+.profileName {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 12px;
+}
+
+.profileId {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.idLabel {
+  background-color: rgba(217, 217, 217, 0.5);
+  border-radius: 2px;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.profileDescription {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.editProfileButton {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.profileDetails {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.profileDetailsTitle {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+
+.profileDetailsDescription {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+
+.viewDetailsButton {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 240px;
+  cursor: pointer;
+}
+
+.infoList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.infoIcon {
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 38px;
+  text-align: center;
+  line-height: 1.6;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoContent {
+  flex-grow: 1;
+}
+
+.infoTitle {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0 0 4px;
+}
+
+.infoSubtitle {
+  font-size: 16px;
+  margin: 0;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .topBar,
+  .logo,
+  .navigation,
+  .mainContent,
+  .dashboardContent,
+  .profileSection,
+  .profileDetails,
+  .viewDetailsButton {
+    max-width: 100%;
+  }
+
+  .sidebar {
+    padding-bottom: 100px;
+    white-space: initial;
+  }
+
+  .dashboardContent {
+    padding: 40px 20px;
+  }
+
+  .profileSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .editProfileButton {
+    margin-top: 20px;
+  }
+}
+
+
