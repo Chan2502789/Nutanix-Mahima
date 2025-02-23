@@ -25,10 +25,10 @@
 
 
 .logo {
-  font-size: 28px; /* Reduced font size */
-  font-weight: 500;
-  line-height: 1;
+  width: 25vh; /* Adjust based on screen height */
+  height: auto; /* Maintains aspect ratio */
 }
+
 
 .navigation {
   display: flex;
@@ -59,13 +59,35 @@
 
 .searchForm {
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin: 1rem 0;
 }
 
-.searchInput {
-  width: 150px; /* Reduced width */
-  padding: 6px; /* Adjusted padding */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem; /* Reduced padding */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+  width: 220px; /* Reduced width */
 }
+
+.searchContainer:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.searchInput {
+  border: none;
+  outline: none;
+  padding: 0.5rem; /* Reduced padding */
+  font-size: 0.9rem; /* Smaller font size */
+  flex-grow: 1;
+}
+
 
 
 

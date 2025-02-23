@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LearnerDashboard from "./components/LearnerDashboard/LearnerDashboard"; // Correct import path
 import Dashboard from "./main/LearnerDashboard/LearnerDashboard";
 import CourseScheduleDashboard from "./shedule/CourseSchedule/CourseScheduleDashboard";
+import AEON from "./main/AEON2025/LearnerDashboard";
 
 function App() {
   return (
@@ -25,6 +26,11 @@ function App() {
       <div className="LearnerDashboard">
         <Routes>
           <Route path="/schedule" element={<CourseScheduleDashboard />} />
+        </Routes>
+      </div>
+      <div className="AEON2025">
+        <Routes>
+          <Route path="/programs/aeon-2025" element={<AEON />} />
         </Routes>
       </div>
     </Router>

@@ -3,7 +3,7 @@ import styles from "./LearnerDashboard.module.css";
 import TopBar from "../../components/TopBar";
 import ProgramList from "./ProgramList";
 
-const Dashboard = () => {
+const AEON = () => {
   return (
     <div className={styles.learnerDashboard}>
       <TopBar />
@@ -14,4 +14,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default AEON;
