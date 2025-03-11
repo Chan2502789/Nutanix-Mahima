@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  background-image: url('./images/image.png'); /* Adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,9 +30,23 @@
   }
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* Optional: Prevent scrolling from inner divs too */
+* {
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -4,35 +4,24 @@ import LearnerDashboard from "./components/LearnerDashboard/LearnerDashboard"; /
 import Dashboard from "./main/LearnerDashboard/LearnerDashboard";
 import CourseScheduleDashboard from "./shedule/CourseSchedule/CourseScheduleDashboard";
 import AEON from "./main/AEON2025/LearnerDashboard";
+import linux from "./main/AEON2025/linux/LearnerDashboard";
+import HardwareDashboard from "./main/AEON2025/hardware/LearnerDashboard";
 
 function App() {
   return (
     <Router>
-      <div className="Dashboard">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-        </Routes>
-      </div>
-      <div className="Home">
-        <Routes>
-          <Route path="/home" element={<Dashboard />} />
-        </Routes>
-      </div>
-      <div className="LearnerDashboard">
-        <Routes>
-          <Route path="/profile" element={<LearnerDashboard />} />
-        </Routes>
-      </div>
-      <div className="LearnerDashboard">
-        <Routes>
-          <Route path="/schedule" element={<CourseScheduleDashboard />} />
-        </Routes>
-      </div>
-      <div className="AEON2025">
-        <Routes>
-          <Route path="/programs/aeon-2025" element={<AEON />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/home" element={<Dashboard />} />
+        <Route path="/profile" element={<LearnerDashboard />} />
+        <Route path="/schedule" element={<CourseScheduleDashboard />} />
+        <Route path="/programs/aeon-2025" element={<AEON />} />
+        <Route
+          path="/programs/aeon-2025/hardware"
+          element={<HardwareDashboard />}
+        />
+        <Route path="/programs/aeon-2025/linux" element={<linux />} />
+      </Routes>
     </Router>
   );
 }

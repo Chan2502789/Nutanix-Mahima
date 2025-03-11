@@ -1,0 +1,111 @@
+.container {
+  background: linear-gradient(to bottom right, #f4f4f4, #dddddd);
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 60px;
+  transition: all 0.4s ease-in-out;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-in-out;
+}
+
+.switch {
+  display: none;
+}
+
+.switch + label {
+  width: 40px;
+  height: 20px;
+  background: #aaa;
+  border-radius: 999px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out;
+}
+
+.switch + label::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.switch:checked + label::before {
+  transform: translateX(20px);
+}
+
+.topicList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.4s ease-in-out;
+}
+
+.topicCard {
+  background: white;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.topicCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: #f9f9f9;
+}
+
+.topicName {
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 24px;
+  font-weight: bold;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}

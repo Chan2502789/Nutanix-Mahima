@@ -3,46 +3,60 @@ import styles from "./LearnerDashboard.module.css";
 
 function ProfileDetails() {
   return (
-    <section className={styles.profileContainer}>
-      <div className={styles.profileWrapper}>
-        <div className={styles.profileHeader}>
-          <div className={styles.profileImage}></div>
-          <h2 className={styles.profileName}>Mahima Yadav</h2>
-          <p className={styles.profileId}>ID: 21280</p>
-          <p className={styles.profileDesignation}>
-            Intern, Systems Reliability Engineer
-          </p>
+    <div className={styles.container}>
+      <section className={styles.profileContainer}>
+        <div className={styles.profileCard}>
+          <div className={styles.profileHeader}>
+            {/* Profile Image on the Left */}
+            <div className={styles.profileImage}></div>
+
+            {/* Profile Details on the Right */}
+            <div className={styles.profileInfo}>
+              <h2 className={styles.profileName}>Mahima Yadav</h2>
+              <p className={styles.profileId}>ID: 21280</p>
+              <p className={styles.profileDesignation}>
+                Intern, Systems Reliability Engineer
+              </p>
+            </div>
+          </div>
+
+          {/* Additional Profile Information */}
+          <div className={styles.profileDetails}>
+            <div className={styles.infoRow}>
+              <strong>Mentor:</strong> <span>Debjit Chatterjee</span>
+            </div>
+            <div className={styles.infoRow}>
+              <strong>College:</strong>{" "}
+              <span>Shri Ramdeobaba College of Engineering and Management</span>
+            </div>
+            <div className={styles.infoRow}>
+              <strong>CGPA:</strong> <span>9.34</span>
+            </div>
+            <div className={styles.infoRow}>
+              <strong>Stream:</strong>{" "}
+              <span>Computer Science and Engineering (AIML)</span>
+            </div>
+            <div className={styles.infoRow}>
+              <strong>Group Name:</strong> <span>A</span>
+            </div>
+            <div className={styles.infoRow}>
+              <strong>Tools:</strong>{" "}
+              <span>Python, Java, HTML, CSS, JavaScript</span>
+            </div>
+            <div className={styles.infoRow}>
+              <strong>Graduation Year:</strong> <span>2025</span>
+            </div>
+            <div className={styles.infoRow}>
+              <strong>Address:</strong>
+              <span>
+                Plot no. 55, Girdhar, Gayatri Nagar, Jai Durga Society,
+                Mankapur, Nagpur - 440030
+              </span>
+            </div>
+          </div>
         </div>
-        <div className={styles.profileDetails}>
-          <p>
-            <strong>Mentor:</strong> Debjit Chatterjee
-          </p>
-          <p>
-            <strong>College:</strong> Shri Ramdeobaba College of Engineering and
-            Management
-          </p>
-          <p>
-            <strong>CGPA:</strong> 9.34
-          </p>
-          <p>
-            <strong>Stream:</strong> Computer Science and Engineering (AIML)
-          </p>
-          <p>
-            <strong>Group Name:</strong> A
-          </p>
-          <p>
-            <strong>Tools:</strong> Python, Java, HTML, CSS, JavaScript
-          </p>
-          <p>
-            <strong>Graduation Year:</strong> 2025
-          </p>
-          <p>
-            <strong>Address:</strong> Plot no. 55, Girdhar, Gayatri Nagar, Jai
-            Durga Society, Mankapur, Nagpur - 440030
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 
