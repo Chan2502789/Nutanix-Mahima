@@ -2,20 +2,11 @@ import React from "react";
 import styles from "./hardware.module.css";
 
 const topics = [
-  { name: "Introduction to Linux & Distributions", status: "Completed" },
-  { name: "File System Structure & Basic Commands", status: "Completed" },
-  { name: "User and Permission Management", status: "Completed" },
-  { name: "Package Management (apt, yum)", status: "Ongoing" },
-  { name: "Process and Job Control", status: "Ongoing" },
-  { name: "Shell Scripting Basics", status: "Ongoing" },
-  { name: "Systemd and Service Management", status: "Upcoming" },
-  { name: "Linux Networking & Services", status: "Upcoming" },
-  { name: "Crontab and Scheduling Tasks", status: "Upcoming" },
-  { name: "Log Files and System Monitoring", status: "Upcoming" },
-  { name: "Disk Partitioning and Mounting", status: "Upcoming" },
-  
+  { name: "Datacenter Evolution", status: "Completed" },
+  { name: "Basic Hardware Components", status: "Ongoing" },
+  { name: "Datacenter Power and Cooling", status: "Upcoming" },
+  { name: "Server Rack Management", status: "Upcoming" },
 ];
-
 
 const statusColors = {
   Completed: "grey", // green
@@ -27,7 +18,7 @@ const Hardware = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>LINUX</h1>
+        <h1>HARDWARE</h1>
 
       </div>
 

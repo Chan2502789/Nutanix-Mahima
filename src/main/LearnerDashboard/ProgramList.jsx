@@ -32,6 +32,7 @@ const ProgramList = () => {
     "LINUX",
     "MOCK CALLS",
     "VIRTUALIZATION",
+    "SECURITY",
     "DATABASE",
     "CLOUD COMPUTING",
     "ARTIFICIAL INTELLIGENCE",
@@ -41,24 +42,12 @@ const ProgramList = () => {
   const infoMap = {
     HARDWARE:
       "Evolution of Datacenters | Basic Hardware | Datacenter Components | Server +",
-    NETWORKING:
-      "Networking Basics | Switches and Routers | VLANs | Subnetting | IP Addressing | Network Protocols",
-    LINUX:
-      "Linux Basics | Terminal Commands | File Permissions | Cron Jobs | Shell Scripting | Package Management",
+    NETWORKING: "Networking Basics | Switches and Routers | VLANs | Subnetting",
+    LINUX: "Linux Basics | Terminal Commands | File Permissions | Cron Jobs",
     "MOCK CALLS":
-      "Mock Interview Scenarios | Technical Troubleshooting | Customer Handling | Communication Skills",
-    VIRTUALIZATION:
-      "VMware | Hyper-V | VirtualBox | Containers | KVM | Snapshots and Cloning",
-    DATABASE:
-      "SQL Basics | Relational Databases | CRUD Operations | Joins | Indexing | Backup and Restore",
-    "CLOUD COMPUTING":
-      "Cloud Fundamentals | IaaS, PaaS, SaaS | AWS | Azure | Google Cloud | Deployment Models",
-    "ARTIFICIAL INTELLIGENCE":
-      "AI Basics | Machine Learning | Neural Networks | Natural Language Processing | AI Use Cases",
-    CYBERSECURITY:
-      "Security Fundamentals | Firewalls | Encryption | Threat Detection | Authentication & Authorization"
+      "Mock Interview Scenarios | Technical Troubleshooting | Customer Handling",
+    VIRTUALIZATION: "VMware | Hyper-V | VirtualBox | Containers",
   };
-  
 
   return (
     <section

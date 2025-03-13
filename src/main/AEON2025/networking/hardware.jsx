@@ -2,19 +2,11 @@ import React from "react";
 import styles from "./hardware.module.css";
 
 const topics = [
-  { name: "Introduction to Networking", status: "Completed" },
-  { name: "Network Topologies", status: "Completed" },
-  { name: "OSI & TCP/IP Models", status: "Completed" },
-
-  { name: "IP Addressing & Subnetting", status: "Ongoing" },
-  { name: "DNS and DHCP", status: "Ongoing" },
-  { name: "Switching & VLANs", status: "Ongoing" },
-
-  { name: "Routing Protocols (RIP, OSPF, BGP)", status: "Upcoming" },
-  { name: "Firewalls and NAT", status: "Upcoming" },
-  { name: "Wi-Fi and Wireless Networking", status: "Upcoming" }
+  { name: "Datacenter Evolution", status: "Completed" },
+  { name: "Basic Hardware Components", status: "Ongoing" },
+  { name: "Datacenter Power and Cooling", status: "Upcoming" },
+  { name: "Server Rack Management", status: "Upcoming" },
 ];
-
 
 const statusColors = {
   Completed: "grey", // green
@@ -26,7 +18,7 @@ const Hardware = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>NETWORKING</h1>
+        <h1>HARDWARE</h1>
 
       </div>
 

@@ -144,7 +144,7 @@
 
 .programsTitleStrip {
   padding: 20px;
-  background-color: #8259f4;
+  background-color: black;
   color: white;
   font-size: 28px;
   font-weight: bold;
@@ -155,7 +155,7 @@
 }
 
 .programsTitleStrip:hover {
-  background-color: black; /* Purple on hover */
+  background-color: #8259f4; /* Purple on hover */
 }
 
 

@@ -5,12 +5,10 @@
   font-family: Roboto, sans-serif;
 }
 
-main{
-  margin-top: 4rem; /* Pushes it further down */
-}
 
 
 .topBar {
+  
   background: linear-gradient(
     135deg,
     #ffffff 0%,
@@ -27,13 +25,13 @@ main{
   display: flex;
   width: 100%;
   align-items: center;
+  gap: 10px; /* Reduced gap */
+  color: #000;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 30px; /* Final gap value */
-  padding: 15px 20px;
-  color: #000;
+  gap: 30px;
+  padding: 15px 20px; /* Reduced padding */
 }
-
 
 
 
@@ -343,7 +341,6 @@ body {
   white-space: nowrap;
   border: 0;
 }
-
 .container {
   display: flex;
   justify-content: center;
@@ -351,7 +348,6 @@ body {
   min-height: 100vh;
   background-color: transparent;
   font-family: 'Roboto', sans-serif;
-  margin-right: 10rem;
 }
 
 .profileContainer {
@@ -362,25 +358,14 @@ body {
 }
 
 .profileCard {
-  background: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border: 1px solid #e0e0e0;
+  background: transparent;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  padding: 4vh;
-  width: 80vh;
-  min-height: 70vh;
+  padding: 30px; /* Increased padding for better spacing */
+  width: 550px; /* Increased width */
   display: flex;
   flex-direction: column;
-  transform: translate(5vh, -8vh);
 }
-
-.profileCard {
-  margin-top: -8vh;
-  margin-left: 22vh;
-}
-
-
-
 
 .profileHeader {
   display: flex;
