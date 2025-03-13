@@ -5,8 +5,14 @@ import Dashboard from "./main/LearnerDashboard/LearnerDashboard";
 import CourseScheduleDashboard from "./shedule/CourseSchedule/CourseScheduleDashboard";
 import AEON from "./main/AEON2025/LearnerDashboard";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import linux from "./main/AEON2025/linux/LearnerDashboard";
 import HardwareDashboard from "./main/AEON2025/hardware/LearnerDashboard";
+=======
+import LinuxDashboard from "./main/AEON2025/hardware/LearnerDashboard";
+import HardwareDashboard from "./main/AEON2025/hardware/LearnerDashboard";
+import NetworkingDashboard from "./main/AEON2025/hardware/LearnerDashboard";
+>>>>>>> parent of 7bac3e2 (All the changes are done on 13 March)
 =======
 import LinuxDashboard from "./main/AEON2025/hardware/LearnerDashboard";
 import HardwareDashboard from "./main/AEON2025/hardware/LearnerDashboard";

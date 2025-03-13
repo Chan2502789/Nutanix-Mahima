@@ -9,8 +9,11 @@
 
 .topBar {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: transparent;
 =======
+=======
+>>>>>>> parent of 7bac3e2 (All the changes are done on 13 March)
   
   background: linear-gradient(
     135deg,
@@ -32,8 +35,14 @@
   gap: 10px; /* Reduced gap */
   color: #000;
 <<<<<<< HEAD
+<<<<<<< HEAD
   justify-content: space-between;
   flex-wrap: wrap;
+=======
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+>>>>>>> parent of 7bac3e2 (All the changes are done on 13 March)
 =======
   justify-content: flex-start;
   flex-wrap: wrap;
