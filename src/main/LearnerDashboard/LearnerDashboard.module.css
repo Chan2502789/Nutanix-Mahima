@@ -22,20 +22,6 @@
   padding: 15px 20px; /* Reduced padding */
 }
 
-.footer {
-  text-align: center;
-  padding: 5px 0; /* Even thinner strip */
-  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
-  color: white;
-  font-size: 14px; /* Slightly smaller text */
-  position: relative;
-  bottom: 15px; /* Slightly lifted */
-  margin-top: -5px;
-  box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.3); /* Softer shadow */
-  width: 100%; /* Full width */
-}
-
-
 .title {
   font-size: 2rem;
   font-weight: 500;
@@ -112,39 +98,23 @@
 .privateIcon:hover {
   transform: scale(1.1);
 }
-/* .programList {
+.programList {
   padding: 20px;
   max-width: 600px;
-  
-  text-align: center;
-} */
-
-.programList {
-  /* display: flex; */
-  padding: 20px;
-  max-width: 800px;
-  min-height: 80vh; /* Makes it fill full height */
   margin: auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  margin: auto;
 }
 
-
 .programsHeader {
-  font-size: 40px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
   margin-bottom: 24px;
   color: #333;
 }
 
-
 .programsTitleStrip {
   padding: 20px;
-  background-color: #8259f4;
+  background-color: black;
   color: white;
   font-size: 28px;
   font-weight: bold;
@@ -155,7 +125,7 @@
 }
 
 .programsTitleStrip:hover {
-  background-color: black; /* Purple on hover */
+  background-color: #8259f4; /* Purple on hover */
 }
 
 
@@ -169,30 +139,24 @@
 .dropdownWrapper {
   max-height: 0;
   overflow: hidden;
-  transition: 
-    max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-    border-radius 0.3s ease, 
-    box-shadow 0.3s ease, 
-    border-top 0.3s ease;
+  transition: max-height 0.5s ease;
+  background-color: white;
+  border: 1px solid #ccc;
   border-top: none;
-  border-radius: 0;
+  border-radius: 0 0 10px 10px;
 }
 
 .dropdownWrapperOpen {
-  max-height: 500px; /* adjust as needed */
-  border-top: 1px solid #000;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 300px; /* Adjust this to control scroll height */
 }
-
 
 .dropdownList {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
 }
-
 
 .dropdownItem {
   display: flex;
@@ -340,51 +304,6 @@ body {
   color: #666;
   margin: 0;
 }
-
-.toggle {
-  position: absolute;
-  left: 95%;
-  top: 15%;
-  transform: translateY(-50%);
-  transition: all 0.4s ease-in-out;
-}
-
-.switch {
-  display: none;
-}
-
-.switch + label {
-  width: 40px;
-  height: 20px;
-  background: #aaa;
-  border-radius: 999px;
-  position: relative;
-  display: block;
-  cursor: pointer;
-  transition: background 0.4s ease-in-out;
-}
-
-.switch + label::before {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 3px;
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  border-radius: 50%;
-  transition: transform 0.4s ease-in-out;
-}
-
-/* When switch is checked, move the circle and change background to black */
-.switch:checked + label {
-  background: black;
-}
-
-.switch:checked + label::before {
-  transform: translateX(20px);
-}
-
 
 .visuallyHidden {
   position: absolute;

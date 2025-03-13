@@ -2,33 +2,34 @@ import React from "react";
 import styles from "./hardware.module.css";
 
 const topics = [
-  { name: "Introduction to Linux & Distributions", status: "Completed" },
-  { name: "File System Structure & Basic Commands", status: "Completed" },
-  { name: "User and Permission Management", status: "Completed" },
-  { name: "Package Management (apt, yum)", status: "Ongoing" },
-  { name: "Process and Job Control", status: "Ongoing" },
-  { name: "Shell Scripting Basics", status: "Ongoing" },
-  { name: "Systemd and Service Management", status: "Upcoming" },
-  { name: "Linux Networking & Services", status: "Upcoming" },
-  { name: "Crontab and Scheduling Tasks", status: "Upcoming" },
-  { name: "Log Files and System Monitoring", status: "Upcoming" },
-  { name: "Disk Partitioning and Mounting", status: "Upcoming" },
-  
+  { name: "Datacenter Evolution", status: "Completed" },
+  { name: "Basic Hardware Components", status: "Ongoing" },
+  { name: "Datacenter Power and Cooling", status: "Upcoming" },
+  { name: "Server Rack Management", status: "Upcoming" },
 ];
 
-
 const statusColors = {
-  Completed: "grey", // green
-  Ongoing: "#32CD32", // turquoise
+  Completed: "#32CD32", // green
+  Ongoing: "#00CED1", // turquoise
   Upcoming: "#FF6347", // tomato
 };
 
-const Hardware = () => {
+const linux = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>LINUX</h1>
+        <h1>HARDWARE</h1>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <div className={styles.toggle}>
+          <input type="checkbox" id="switch" className={styles.switch} />
+          <label htmlFor="switch"></label>
+        </div>
+=======
+=======
+>>>>>>> parent of 7bac3e2 (All the changes are done on 13 March)
 
+>>>>>>> parent of 7bac3e2 (All the changes are done on 13 March)
       </div>
 
       <div className={styles.topicList}>
@@ -44,8 +45,10 @@ const Hardware = () => {
           </div>
         ))}
       </div>
+
+      <div className={styles.footer}>AEON</div>
     </div>
   );
 };
 
-export default Hardware;
+export default linux;

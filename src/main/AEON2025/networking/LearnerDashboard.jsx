@@ -3,7 +3,7 @@ import styles from "./LearnerDashboard.module.css";
 import TopBar from "../../../components/TopBar";
 import Hardware from "./hardware";
 
-const NetworkingDashboard = () => {
+const HardwareDashboard = () => {
   return (
     <div className={styles.learnerDashboard}>
       <TopBar />
@@ -18,4 +18,4 @@ const NetworkingDashboard = () => {
   );
 };
 
-export default NetworkingDashboard;
+export default HardwareDashboard;

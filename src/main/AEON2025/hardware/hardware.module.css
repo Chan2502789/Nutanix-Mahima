@@ -61,19 +61,6 @@
   transition: transform 0.4s ease-in-out;
 }
 
-.footer {
-  text-align: center;
-  padding: 5px 0; /* Even thinner strip */
-  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
-  color: white;
-  font-size: 14px; /* Slightly smaller text */
-  position: relative;
-  bottom: 15px; /* Slightly lifted */
-  margin-top: -5px;
-  box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.3); /* Softer shadow */
-  width: 100%; /* Full width */
-}
-
 .switch:checked + label::before {
   transform: translateX(20px);
 }
@@ -97,7 +84,11 @@
   cursor: pointer;
 }
 
-
+.topicCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: #f9f9f9;
+}
 
 .topicName {
   font-weight: 500;

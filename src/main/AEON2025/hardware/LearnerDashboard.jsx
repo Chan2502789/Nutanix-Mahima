@@ -14,9 +14,6 @@ const HardwareDashboard = () => {
       <main>
         <Hardware />
       </main>
-      <footer className={styles.footer}>
-        <p>AEON</p>
-      </footer>
     </div>
   );
 };
