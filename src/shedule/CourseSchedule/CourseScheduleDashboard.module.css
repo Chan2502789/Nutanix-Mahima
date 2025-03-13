@@ -7,7 +7,11 @@
   color: #000;
   height: 100vh;
   justify-content: flex-start;
+  padding: 0;
+  gap: 0;
 }
+
+
 
 .filtersContainer {
   display: flex;
@@ -226,6 +230,16 @@
   border-radius: 8px;
 }
 
+main {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -10px; /* Moves it slightly up */
+}
+
+
+
 .courseEmoji {
   font-size: 63px;
   width: 100px;
@@ -301,6 +315,7 @@
   background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
+
 
 
 @media (max-width: 991px) {

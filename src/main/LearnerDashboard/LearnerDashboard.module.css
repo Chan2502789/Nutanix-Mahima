@@ -343,8 +343,8 @@ body {
 
 .toggle {
   position: absolute;
-  left: 95%;
-  top: 15%;
+  right: 15vh;
+  top: 30vh;
   transform: translateY(-50%);
   transition: all 0.4s ease-in-out;
 }
