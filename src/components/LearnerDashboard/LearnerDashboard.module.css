@@ -8,15 +8,28 @@
 
 
 .topBar {
-  background-color: transparent;
+  
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #e0e0e0 20%,
+    #000000 40%,
+    #333333 30%,
+    #6a0dad 70%,
+    #7855FA 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
   display: flex;
   width: 100%;
   align-items: center;
   gap: 10px; /* Reduced gap */
   color: #000;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 30px;
   padding: 15px 20px; /* Reduced padding */
 }
 
@@ -45,16 +58,26 @@ body {
 
 .navigation {
   display: flex;
-  min-width: 200px; /* Adjusted width */
+  justify-content: flex-start;
   align-items: center;
-  gap: 12px; /* Reduced gap */
-  font-size: 16 px; /* Reduced font size */
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 110vh; /* Shift slightly to the left */
 }
+
+
+.navList {
+  display: flex;
+  gap: 30px;
+  margin-left: 0; /* Align hard left */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
 
 .navigation ul {
   display: flex;
-  gap: 30px; /* Increased spacing between nav items */
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;

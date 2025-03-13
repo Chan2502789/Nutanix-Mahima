@@ -10,6 +10,9 @@ const Dashboard = () => {
       <main>
         <ProgramList />
       </main>
+      <footer className={styles.footer}>
+        <p>AEON</p>
+      </footer>
     </div>
   );
 };

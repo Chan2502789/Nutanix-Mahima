@@ -84,11 +84,7 @@
   cursor: pointer;
 }
 
-.topicCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  background: #f9f9f9;
-}
+
 
 .topicName {
   font-weight: 500;

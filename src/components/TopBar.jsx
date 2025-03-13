@@ -6,9 +6,11 @@ import nutanixLogo from "../images/nutanix.png";
 function TopBar() {
   return (
     <header className={styles.topBar}>
-      <img src={nutanixLogo} alt="NUTANIX" className={styles.logo} />
+      <Link to="/">
+        <img src={nutanixLogo} alt="NUTANIX" className={styles.logo} />
+      </Link>
       <nav className={styles.navigation}>
-        <ul>
+        <ul className={styles.navList}>
           <li>
             <Link to="/" className={styles.navLink}>
               Home
@@ -24,8 +26,13 @@ function TopBar() {
               Profile
             </Link>
           </li>
+          <li>
+            <Link to="/feedback" className={styles.navLink}>
+              Feedback
+            </Link>
+          </li>
         </ul>
-        </nav>
+      </nav>
     </header>
   );
 }

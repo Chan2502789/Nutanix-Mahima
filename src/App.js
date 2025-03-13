@@ -4,8 +4,9 @@ import LearnerDashboard from "./components/LearnerDashboard/LearnerDashboard"; /
 import Dashboard from "./main/LearnerDashboard/LearnerDashboard";
 import CourseScheduleDashboard from "./shedule/CourseSchedule/CourseScheduleDashboard";
 import AEON from "./main/AEON2025/LearnerDashboard";
-import linux from "./main/AEON2025/linux/LearnerDashboard";
+import LinuxDashboard from "./main/AEON2025/hardware/LearnerDashboard";
 import HardwareDashboard from "./main/AEON2025/hardware/LearnerDashboard";
+import NetworkingDashboard from "./main/AEON2025/hardware/LearnerDashboard";
 
 function App() {
   return (
@@ -20,7 +21,15 @@ function App() {
           path="/programs/aeon-2025/hardware"
           element={<HardwareDashboard />}
         />
-        <Route path="/programs/aeon-2025/linux" element={<linux />} />
+        <Route
+          path="/programs/aeon-2025/linux"
+          element={<LinuxDashboard />}
+        />
+        <Route
+          path="/programs/aeon-2025/networking"
+          element={<NetworkingDashboard />}
+        />
+     
       </Routes>
     </Router>
   );
