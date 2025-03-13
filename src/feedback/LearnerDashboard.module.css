@@ -36,6 +36,12 @@
   padding: 15px 20px; /* Reduced padding */
 }
 
+
+.shift{
+  right:90%;
+
+}
+
 .title {
   font-size: 2rem;
   font-weight: 500;

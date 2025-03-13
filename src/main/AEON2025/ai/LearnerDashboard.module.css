@@ -8,17 +8,6 @@
   min-height: 100vh; /* Ensures it fills the screen */
 }
 
-.footer {
-  text-align: center;
-  padding: 5px 0;
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
-  font-size: 14px;
-  box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  margin-top: auto;
-  margin-bottom: 20px; /* 👈 Pushes it a bit above the bottom */
-}
 
 
 
@@ -52,6 +41,18 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 5px 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 14px;
+  box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 20px; /* 👈 Pushes it a bit above the bottom */
 }
 
 .tab {

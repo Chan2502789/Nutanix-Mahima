@@ -57,6 +57,9 @@ const CourseList = () => {
         </h2>
       </div>
 
+      <br></br>
+      <br></br>
+
       {/* Search & Filter Section */}
       <div className={styles.searchContainer}>
         <input
@@ -67,7 +70,8 @@ const CourseList = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-      </div>
+      </div>  
+      <br></br>
 
       {/* Filter Buttons */}
       <div
@@ -91,6 +95,9 @@ const CourseList = () => {
           </button>
         ))}
       </div>
+
+      <br/>
+      <br></br>
 
       {/* Toggle Completed Schedule */}
       <label

@@ -2,18 +2,17 @@ import React from "react";
 import styles from "./hardware.module.css";
 
 const topics = [
-  { name: "Introduction to Linux & Distributions", status: "Completed" },
-  { name: "File System Structure & Basic Commands", status: "Completed" },
-  { name: "User and Permission Management", status: "Completed" },
-  { name: "Package Management (apt, yum)", status: "Ongoing" },
-  { name: "Process and Job Control", status: "Ongoing" },
-  { name: "Shell Scripting Basics", status: "Ongoing" },
-  { name: "Systemd and Service Management", status: "Upcoming" },
-  { name: "Linux Networking & Services", status: "Upcoming" },
-  { name: "Crontab and Scheduling Tasks", status: "Upcoming" },
-  { name: "Log Files and System Monitoring", status: "Upcoming" },
-  { name: "Disk Partitioning and Mounting", status: "Upcoming" },
-  
+  { name: "Introduction to Networking", status: "Completed" },
+  { name: "Network Topologies", status: "Completed" },
+  { name: "OSI & TCP/IP Models", status: "Completed" },
+
+  { name: "IP Addressing & Subnetting", status: "Ongoing" },
+  { name: "DNS and DHCP", status: "Ongoing" },
+  { name: "Switching & VLANs", status: "Ongoing" },
+
+  { name: "Routing Protocols (RIP, OSPF, BGP)", status: "Upcoming" },
+  { name: "Firewalls and NAT", status: "Upcoming" },
+  { name: "Wi-Fi and Wireless Networking", status: "Upcoming" }
 ];
 
 
@@ -27,7 +26,7 @@ const Hardware = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>LINUX</h1>
+        <h1>MOCK CALLS</h1>
 
       </div>
 

@@ -1,21 +1,17 @@
 import React from "react";
-import TopBar from "../../components/TopBar";
-import ProfileDetails from "./ProfileDetails"; // Create this component
 import styles from "./LearnerDashboard.module.css";
+import TopBar from "../../components/TopBar";
+import ProfileDetails from "./ProfileDetails";
 
-function LearnerDashboard() {
+const AEON = () => {
   return (
-    <div className="hide-scrollbar overflow-auto">
-      <div className={styles.learnerScheduleDashboard}>
-        <TopBar />
-        <div className={styles.mainContent}>
-          <main className={styles.dashboardContent}>
-            <ProfileDetails />
-          </main>
-        </div>
-      </div>
+    <div className={styles.learnerDashboard}>
+      <TopBar />
+      <main>
+        <ProfileDetails />
+      </main>
     </div>
   );
-}
+};
 
-export default LearnerDashboard;
+export default AEON;

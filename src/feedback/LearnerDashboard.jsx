@@ -1,19 +1,18 @@
 import React from "react";
 import styles from "./LearnerDashboard.module.css";
-import TopBar from "../../../components/TopBar";
-import Hardware from "./hardware";
+import TopBar from "../components/TopBar";
+import Feedback from "./feedback";
 
-const HardwareDashboard = () => {
+const FeedbackDashboard = () => {
   return (
     <div className={styles.learnerDashboard}>
       <TopBar />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className={styles.shift}>
       <main>
-        <Hardware />
+        <Feedback />
       </main>
+      </div>
+     
       <footer className={styles.footer}>
         <p>AEON</p>
       </footer>
@@ -21,4 +20,4 @@ const HardwareDashboard = () => {
   );
 };
 
-export default HardwareDashboard;
+export default FeedbackDashboard;
