@@ -19,10 +19,14 @@ const Hardware = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <h1>HARDWARE</h1>
+<<<<<<< HEAD
         <div className={styles.toggle}>
           <input type="checkbox" id="switch" className={styles.switch} />
           <label htmlFor="switch"></label>
         </div>
+=======
+
+>>>>>>> parent of 7bac3e2 (All the changes are done on 13 March)
       </div>
 
       <div className={styles.topicList}>
