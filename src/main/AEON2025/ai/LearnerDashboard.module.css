@@ -234,9 +234,43 @@
   
 }
 
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.5rem;
+  }
 
+  .tab {
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+  }
 
+  .searchInput {
+    width: 150px;
+  }
 
+  .programGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .tab {
+    font-size: 1.2rem;
+    margin: 0 1.5rem;
+  }
+
+  .searchInput {
+    width: 250px;
+  }
+
+   .programGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 @media (max-width: 991px) {
   .topBar {
