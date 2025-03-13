@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./LearnerDashboard.module.css";
 
@@ -6,25 +6,10 @@ const ProgramList = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
-  const dropdownRef = useRef(null);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
-
-  // Close dropdown if clicked outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   const items = [
     "HARDWARE",
@@ -50,19 +35,9 @@ const ProgramList = () => {
   };
 
   return (
-    <section
-      className={styles.programList}
-      aria-labelledby="programsTitle"
-      ref={dropdownRef}
-    >
-
-      <br></br>
-      <br></br>
+    <section className={styles.programList} aria-labelledby="programsTitle">
       <h1 className={styles.programsHeader}>PROGRAM</h1>
-      <div className={styles.toggle}>
-          <input type="checkbox" id="switch" className={styles.switch} />
-          <label htmlFor="switch"></label>
-        </div>
+
       <div
         className={styles.programsTitleStrip}
         onClick={handleToggle}
@@ -84,7 +59,7 @@ const ProgramList = () => {
             <li
               key={index}
               className={styles.dropdownItem}
-              onClick={() =>                    
+              onClick={() =>
                 navigate(`/programs/aeon-2025/${item.toLowerCase()}`)
               }
             >

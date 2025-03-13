@@ -9,8 +9,8 @@ const topics = [
 ];
 
 const statusColors = {
-  Completed: "grey", // green
-  Ongoing: "#32CD32", // turquoise
+  Completed: "#32CD32", // green
+  Ongoing: "#00CED1", // turquoise
   Upcoming: "#FF6347", // tomato
 };
 
@@ -19,7 +19,10 @@ const Hardware = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <h1>HARDWARE</h1>
-
+        <div className={styles.toggle}>
+          <input type="checkbox" id="switch" className={styles.switch} />
+          <label htmlFor="switch"></label>
+        </div>
       </div>
 
       <div className={styles.topicList}>
@@ -35,6 +38,8 @@ const Hardware = () => {
           </div>
         ))}
       </div>
+
+      <div className={styles.footer}>AEON</div>
     </div>
   );
 };
