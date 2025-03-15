@@ -29,7 +29,7 @@
   color: white;
   font-size: 14px; /* Slightly smaller text */
   position: relative;
-  bottom: 15px; /* Slightly lifted */
+  bottom: 35px; /* Slightly lifted */
   margin-top: -5px;
   box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.3); /* Softer shadow */
   width: 100%; /* Full width */
@@ -343,11 +343,46 @@ body {
 
 .toggle {
   position: absolute;
-  right: 15vh;
-  top: 30vh;
+  right: 1vh;
+  top: 5vh;
   transform: translateY(-50%);
   transition: all 0.4s ease-in-out;
 }
+
+.toggleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 15vh;
+  top: 10vh;
+  transition: all 0.4s ease-in-out;
+}
+
+.toggleLabel {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
+  text-align: right;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Add animation for toggling label */
+.toggleLabel.fade-out {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+.toggle {
+  position: absolute;
+  right: 1vh;
+  top: 5vh;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-in-out;
+}
+
 
 .switch {
   display: none;

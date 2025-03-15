@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./LearnerDashboard/LearnerDashboard.module.css";
-import nutanixLogo from "../images/nutanix.png";
+import styles from "./topbar.module.css";
+import nutanixLogo from "../../images/nutanix.png";
 
 function TopBar() {
   return (
@@ -29,6 +29,11 @@ function TopBar() {
           <li>
             <Link to="/feedback" className={styles.navLink}>
               Discussions
+            </Link>
+          </li>
+          <li>
+            <Link to="/feedback" className={styles.navLink}>
+              Feedback
             </Link>
           </li>
         </ul>

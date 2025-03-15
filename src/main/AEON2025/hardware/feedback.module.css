@@ -1,0 +1,87 @@
+.timelineContainer {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .timelineItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    transition: opacity 0.7s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Draw the vertical line between circles */
+  .timelineItem::before {
+    content: "";
+    position: absolute;
+    width: 2px; /* 👈 Changed from 4px to 2px for thinner line */
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  
+  
+  .firstItem::before {
+    top: 50%; /* remove top half */
+  }
+  
+  .lastItem::before {
+    bottom: 50%; /* remove bottom half */
+  }
+  
+  .circle {
+    width: 48px;
+    height: 48px;
+    background-color: #7855FA;
+    border-radius: 50%;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .labelLeft {
+    position: absolute;
+    right: calc(50% + 60px);
+    text-align: right;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+  }
+  
+  .labelRight {
+    position: absolute;
+    left: calc(50% + 60px);
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+  }
+  
+  /* Hover effects */
+  .timelineItem:hover .circle {
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(120, 85, 250, 0.5);
+  }
+  
+  .timelineItem:hover .labelLeft,
+  .timelineItem:hover .labelRight {
+    color: #7855FA;
+    font-weight: 600;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+  
+  .hidden {
+    opacity: 0.3;
+  }
+  

@@ -6,13 +6,17 @@ const ProgramList = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [isPrivate, setIsPrivate] = useState(false);
   const dropdownRef = useRef(null);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
 
-  // Close dropdown if clicked outside
+  const handleSwitchChange = () => {
+    setIsPrivate((prev) => !prev);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -56,9 +60,8 @@ const ProgramList = () => {
     "ARTIFICIAL INTELLIGENCE":
       "AI Basics | Machine Learning | Neural Networks | Natural Language Processing | AI Use Cases",
     CYBERSECURITY:
-      "Security Fundamentals | Firewalls | Encryption | Threat Detection | Authentication & Authorization"
+      "Security Fundamentals | Firewalls | Encryption | Threat Detection | Authentication & Authorization",
   };
-  
 
   return (
     <section
@@ -66,14 +69,26 @@ const ProgramList = () => {
       aria-labelledby="programsTitle"
       ref={dropdownRef}
     >
-
-      <br></br>
-      <br></br>
+      <br />
+      <br />
       <h1 className={styles.programsHeader}>PROGRAM</h1>
-      <div className={styles.toggle}>
-          <input type="checkbox" id="switch" className={styles.switch} />
+
+      <div className={styles.toggleSection}>
+        <div className={styles.toggleLabel}>
+          {isPrivate ? "Private" : "Public"}
+        </div>
+        <div className={styles.toggle}>
+          <input
+            type="checkbox"
+            id="switch"
+            className={styles.switch}
+            checked={isPrivate}
+            onChange={handleSwitchChange}
+          />
           <label htmlFor="switch"></label>
         </div>
+      </div>
+
       <div
         className={styles.programsTitleStrip}
         onClick={handleToggle}
@@ -95,7 +110,7 @@ const ProgramList = () => {
             <li
               key={index}
               className={styles.dropdownItem}
-              onClick={() =>                    
+              onClick={() =>
                 navigate(`/programs/aeon-2025/${item.toLowerCase()}`)
               }
             >

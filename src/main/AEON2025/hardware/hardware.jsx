@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./hardware.module.css";
 
 const topics = [
@@ -9,17 +10,22 @@ const topics = [
 ];
 
 const statusColors = {
-  Completed: "grey", // green
-  Ongoing: "#32CD32", // turquoise
-  Upcoming: "#FF6347", // tomato
+  Completed: "grey",
+  Ongoing: "#32CD32",
+  Upcoming: "#FF6347",
 };
 
 const Hardware = () => {
+  const navigate = useNavigate();
+
+  const handleFeedbackClick = () => {
+    navigate("/mentor-feedback"); // Navigate to this route
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <h1>HARDWARE</h1>
-
       </div>
 
       <div className={styles.topicList}>
@@ -34,6 +40,12 @@ const Hardware = () => {
             </span>
           </div>
         ))}
+      </div>
+
+      <div className={styles.feedbackContainer}>
+        <button className={styles.feedbackButton} onClick={handleFeedbackClick}>
+          Feedback by Mentor
+        </button>
       </div>
     </div>
   );

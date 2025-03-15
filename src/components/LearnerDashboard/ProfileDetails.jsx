@@ -23,31 +23,33 @@ function ProfileDetails() {
           {/* Additional Profile Information */}
           <div className={styles.profileDetails}>
             <div className={styles.infoRow}>
-              <strong>Mentor:</strong> <span>Debjit Chatterjee</span>
+              <strong>Mentor:</strong>&nbsp; &nbsp; &nbsp;{" "}
+              <span>Debjit Chatterjee</span>
             </div>
             <div className={styles.infoRow}>
-              <strong>College:</strong>{" "}
+              <strong>College:</strong>&nbsp; &nbsp; &nbsp;{" "}
               <span>Shri Ramdeobaba College of Engineering and Management</span>
             </div>
             <div className={styles.infoRow}>
-              <strong>CGPA:</strong> <span>9.34</span>
+              <strong>CGPA:</strong>&nbsp; &nbsp; &nbsp; <span>9.34</span>
             </div>
             <div className={styles.infoRow}>
-              <strong>Stream:</strong>{" "}
+              <strong>Stream:</strong>&nbsp; &nbsp; &nbsp;{" "}
               <span>Computer Science and Engineering (AIML)</span>
             </div>
             <div className={styles.infoRow}>
-              <strong>Group Name:</strong> <span>A</span>
+              <strong>Group Name:</strong>&nbsp; &nbsp; &nbsp; <span>A</span>
             </div>
             <div className={styles.infoRow}>
-              <strong>Tools:</strong>{" "}
+              <strong>Tools:</strong>&nbsp; &nbsp; &nbsp;{" "}
               <span>Python, Java, HTML, CSS, JavaScript</span>
             </div>
             <div className={styles.infoRow}>
-              <strong>Graduation Year:</strong> <span>2025</span>
+              <strong>Graduation Year:</strong>&nbsp; &nbsp; &nbsp;{" "}
+              <span>2025</span>
             </div>
             <div className={styles.infoRow}>
-              <strong>Address:</strong>
+              <strong>Address:</strong>&nbsp; &nbsp; &nbsp;
               <span>
                 Plot no. 55, Girdhar, Gayatri Nagar, Jai Durga Society,
                 Mankapur, Nagpur - 440030
