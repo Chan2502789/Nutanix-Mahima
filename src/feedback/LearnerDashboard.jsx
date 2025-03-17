@@ -1,18 +1,18 @@
 import React from "react";
 import styles from "./LearnerDashboard.module.css";
 import TopBar from "../components/TopBar";
-import Feedback from "./feedback";
+import Discussions from "./discussions";
 
 const FeedbackDashboard = () => {
   return (
     <div className={styles.learnerDashboard}>
       <TopBar />
       <div className={styles.shift}>
-      <main>
-        <Feedback />
-      </main>
+        <main>
+          <Discussions />
+        </main>
       </div>
-     
+
       <footer className={styles.footer}>
         <p>AEON</p>
       </footer>

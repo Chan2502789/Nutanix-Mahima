@@ -16,12 +16,6 @@ const statusColors = {
 };
 
 const Hardware = () => {
-  const navigate = useNavigate();
-
-  const handleFeedbackClick = () => {
-    navigate("/mentor-feedback"); // Navigate to this route
-  };
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -40,12 +34,6 @@ const Hardware = () => {
             </span>
           </div>
         ))}
-      </div>
-
-      <div className={styles.feedbackContainer}>
-        <button className={styles.feedbackButton} onClick={handleFeedbackClick}>
-          Feedback by Mentor
-        </button>
       </div>
     </div>
   );

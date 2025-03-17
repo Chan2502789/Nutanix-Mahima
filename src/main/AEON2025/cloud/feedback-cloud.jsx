@@ -3,7 +3,7 @@ import styles from "./feedback.module.css";
 import { useLocation } from "react-router-dom";
 import TopBar from "../TopBar";
 
-const FeedbackHardware = () => {
+const FeedbackCloud = () => {
   const location = useLocation();
   const selectedDate = location.state?.date || "";
 
@@ -35,4 +35,4 @@ const FeedbackHardware = () => {
   );
 };
 
-export default FeedbackHardware;
+export default FeedbackCloud;

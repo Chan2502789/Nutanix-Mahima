@@ -14,7 +14,9 @@ import DatabaseDashboard from "./main/AEON2025/database/LearnerDashboard";
 import CyberDashboard from "./main/AEON2025/cyber/LearnerDashboard";
 import AIDashboard from "./main/AEON2025/ai/LearnerDashboard";
 import FeedbackDashboard from "./feedback/LearnerDashboard";
-import Timeline from "./main/AEON2025/hardware/feedback-hardware";
+import Discussions from "./feedback/discussions";
+import FeedbackHardware from "./main/AEON2025/hardware/feedback-hardware";
+import Feedback from "./feedback/feed";
 
 function App() {
   return (
@@ -59,7 +61,9 @@ function App() {
           path="/programs/aeon-2025/cloud computing"
           element={<CloudDashboard />}
         />
-        <Route path="/mentor-feedback" element={<Timeline />} />
+        <Route path="/feedback" element={<Discussions />} />
+        <Route path="/discussion" element={<Feedback />} />
+        <Route path="/feedback-hardware" element={<FeedbackHardware />} />
       </Routes>
     </Router>
   );

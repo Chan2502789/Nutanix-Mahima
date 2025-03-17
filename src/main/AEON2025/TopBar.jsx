@@ -32,7 +32,7 @@ function TopBar() {
             </Link>
           </li>
           <li>
-            <Link to="/feedback" className={styles.navLink}>
+            <Link to="/feedback-hardware" className={styles.navLink}>
               Feedback
             </Link>
           </li>

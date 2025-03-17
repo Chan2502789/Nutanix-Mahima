@@ -1,22 +1,11 @@
 import React from "react";
-import styles from "./feedback.module.css";
+import styles from "./feed.module.css";
 import { useLocation } from "react-router-dom";
-import TopBar from "../TopBar";
-
-const FeedbackHardware = () => {
+import TopBar from "../components/TopBar";
+const Feedback = () => {
   const location = useLocation();
-  const selectedDate = location.state?.date || "";
-
-  const feedbackMap = {
-    "Monday, 15 January 2025": {
-      trainer: "xyz",
-      feedback:
-        "Great work on the React module! Your understanding of hooks is solid. Next time, try to simplify your components more.",
-    },
-  };
-
   const { trainer = "Unknown", feedback = "No feedback provided." } =
-    feedbackMap[selectedDate] || {};
+    location.state || {};
 
   return (
     <div>
@@ -35,4 +24,4 @@ const FeedbackHardware = () => {
   );
 };
 
-export default FeedbackHardware;
+export default Feedback;
