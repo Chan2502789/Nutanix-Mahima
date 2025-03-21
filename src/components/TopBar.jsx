@@ -27,8 +27,13 @@ function TopBar() {
             </Link>
           </li>
           <li>
-            <Link to="/feedback" className={styles.navLink}>
+            <Link to="/discussion" className={styles.navLink}>
               Discussions
+            </Link>
+          </li>
+          <li>
+            <Link to="/feedback" className={styles.navLink}>
+              Feedback
             </Link>
           </li>
         </ul>

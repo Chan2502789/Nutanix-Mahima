@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./LearnerDashboard.module.css";
-import TopBar from "../TopBar";
+import TopBar from "../../../components/TopBar";
 import Hardware from "./hardware";
 
 const CloudDashboard = () => {

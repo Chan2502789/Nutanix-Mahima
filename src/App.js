@@ -13,10 +13,8 @@ import CloudDashboard from "./main/AEON2025/cloud/LearnerDashboard";
 import DatabaseDashboard from "./main/AEON2025/database/LearnerDashboard";
 import CyberDashboard from "./main/AEON2025/cyber/LearnerDashboard";
 import AIDashboard from "./main/AEON2025/ai/LearnerDashboard";
+import Feed from "./feedback/feed";
 import FeedbackDashboard from "./feedback/LearnerDashboard";
-import Discussions from "./feedback/discussions";
-import FeedbackHardware from "./main/AEON2025/hardware/feedback-hardware";
-import Feedback from "./feedback/feed";
 
 function App() {
   return (
@@ -27,7 +25,6 @@ function App() {
         <Route path="/profile" element={<LearnerDashboard />} />
         <Route path="/schedule" element={<CourseScheduleDashboard />} />
         <Route path="/programs/aeon-2025" element={<AEON />} />
-        <Route path="/feedback" element={<FeedbackDashboard />} />
         <Route
           path="/programs/aeon-2025/hardware"
           element={<HardwareDashboard />}
@@ -61,9 +58,8 @@ function App() {
           path="/programs/aeon-2025/cloud computing"
           element={<CloudDashboard />}
         />
-        <Route path="/feedback" element={<Discussions />} />
-        <Route path="/discussion" element={<Feedback />} />
-        <Route path="/feedback-hardware" element={<FeedbackHardware />} />
+        <Route path="/discussion" element={<FeedbackDashboard />} />
+        <Route path="/feedback" element={<Feed />} />
       </Routes>
     </Router>
   );

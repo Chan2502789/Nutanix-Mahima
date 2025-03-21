@@ -1,71 +1,83 @@
-.container {
-    min-height: 100vh;
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 2rem;
-    animation: shimmer 15s infinite alternate;
-  }
-  
-  @keyframes shimmer {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-  
-  .centeredContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .feedbackPage {
-    background-color: transparent;
-    padding: 2rem 3rem;
-    border-radius: 20px;
-  
-    max-width: 700px;
-    width: 100%;
-  }
-  
-  .heading {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 1rem;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  
-  .trainerName {
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: black;
-    margin-bottom: 2rem;
-    text-align: center;
-    text-shadow: 1px 1px 4px #000;
-  }
-  
-  .feedbackBox {
-    background: transparent;
-    padding: 2rem;
-    border-radius: 16px;
-    color: black;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: justify;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-  .feedbackBox:hover {
-    transform: scale(1.02);
-  }
-  
+.pageContainer {
+  min-height: 100vh;
+  padding: 2rem;
+  background: url("../images/image.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: black;
+  text-align: center;
+}
+
+/* Shared card */
+.card {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Collapsed (default) card style */
+.collapsedCard {
+  background-color: #111;
+  color: white;
+}
+
+/* Expanded card style */
+.expandedCard {
+  background-color: #7f5af0;
+  color: white;
+}
+
+/* Header: Trainer (left), Topic (right) */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Topic styling */
+.topic {
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* Content wrapper */
+.cardContent {
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+}
+
+/* Show feedback */
+.showContent {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* Hide feedback */
+.hideContent {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+/* Feedback text */
+.cardText {
+  font-size: 1rem;
+  line-height: 1.6;
+}

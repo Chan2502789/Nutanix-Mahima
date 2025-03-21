@@ -29,7 +29,7 @@
   color: white;
   font-size: 14px; /* Slightly smaller text */
   position: relative;
-  bottom: 35px; /* Slightly lifted */
+  bottom: -30px; /* Slightly lifted */
   margin-top: -5px;
   box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.3); /* Softer shadow */
   width: 100%; /* Full width */

@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./discussions.module.css";
 
-import { useNavigate } from "react-router-dom";
-
 const timelineData = [
-  "Monday, 15 Januarys 2025",
+  "Monday, 15 January 2025",
   "Tuesday, 22 January 2025",
   "Friday, 03 February 2025",
   "Monday, 17 February 2025",
@@ -13,46 +11,26 @@ const timelineData = [
 ];
 
 const feedbackMap = {
-  "Monday, 15 Januarys 2025": {
-    trainer: "xyz",
-    feedback:
-      "Great work on the React module! Your understanding of hooks is solid. Next time, try to simplify your components more.",
-  },
-  "Tuesday, 22 January 2025": {
-    trainer: "xyz",
-    feedback:
-      "Excellent presentation skills. Keep an eye on consistency in data handling throughout the app.",
-  },
-  "Friday, 03 February 2025": {
-    trainer: "xyz",
-    feedback:
-      "You handled the backend integration very well. Would love to see more unit tests in your future work.",
-  },
-  "Monday, 17 February 2025": {
-    trainer: "xyz",
-    feedback:
-      "Very creative dashboard layout! Just make sure responsiveness is thoroughly tested.",
-  },
-  "Thursday, 12 March 2025": {
-    trainer: "xyz",
-    feedback:
-      "Good improvements in debugging speed. Pay a bit more attention to code comments.",
-  },
-  "Saturday, 25 March 2025": {
-    trainer: "xyz",
-    feedback:
-      "Fantastic effort all around. Try to communicate blockers earlier to help the team more.",
-  },
+  "Monday, 15 January 2025":
+    "The team gathered to discuss the project kickoff. Goals, responsibilities, and deadlines were outlined to ensure clarity and alignment moving forward.",
+  "Tuesday, 22 January 2025":
+    "A creative brainstorming session focused on UI/UX design. Different layout structures and user flows were discussed to enhance user experience.",
+  "Friday, 03 February 2025":
+    "Sprint review and planning meeting. Completed tasks were evaluated, and upcoming sprint objectives were set based on performance insights.",
+  "Monday, 17 February 2025":
+    "A retrospective session where the team shared feedback on what worked well and areas for improvement in the development process.",
+  "Thursday, 12 March 2025":
+    "Final presentation and wrap-up discussion. Key learnings, challenges, and overall outcomes were shared before the project closure.",
+  "Saturday, 25 March 2025":
+    "Client meeting to present the project’s progress and discuss the future roadmap for additional features and improvements.",
 };
 
 const Discussions = () => {
   const itemRefs = useRef([]);
   const [visibleItems, setVisibleItems] = useState([]);
-  const navigate = useNavigate();
+  const [selectedItem, setSelectedItem] = useState(timelineData[0]); // Default first item
 
   useEffect(() => {
-    const currentRefs = itemRefs.current;
-
     const observer = new IntersectionObserver(
       (entries) => {
         const updated = [...visibleItems];
@@ -67,35 +45,35 @@ const Discussions = () => {
       { threshold: 0.6 }
     );
 
-    currentRefs.forEach((ref) => {
+    itemRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      currentRefs.forEach((ref) => {
+      itemRefs.current.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
   }, [visibleItems]);
 
   const handleClick = (date) => {
-    const feedbackData = feedbackMap[date];
-    navigate("/discussion", { state: feedbackData });
+    setSelectedItem(date);
   };
 
   return (
     <div className={styles.timelineContainer}>
+      {selectedItem && (
+        <div className={styles.hoverBox}>
+          <h2 className={styles.discussionHeading}>DISCUSSION</h2>
+          <p className={styles.justifiedText}>{feedbackMap[selectedItem]}</p>
+        </div>
+      )}
+
       {timelineData.map((item, index) => {
         const isVisible = visibleItems[index];
-        const labelClass =
-          index % 2 === 0 ? styles.labelLeft : styles.labelRight;
-
-        const isFirst = index === 0;
-        const isLast = index === timelineData.length - 1;
-
         const itemClass = `${styles.timelineItem} ${
           isVisible ? styles.visible : styles.hidden
-        } ${isFirst ? styles.firstItem : ""} ${isLast ? styles.lastItem : ""}`;
+        }`;
 
         return (
           <div
@@ -105,8 +83,14 @@ const Discussions = () => {
             className={itemClass}
             onClick={() => handleClick(item)}
           >
-            <div className={styles.circle}></div>
-            <div className={labelClass}>{item}</div>
+            <div className={styles.timelineStructure}>
+              {index !== 0 && <div className={styles.line}></div>}
+              <div className={styles.circle}></div>
+              {index !== timelineData.length - 1 && (
+                <div className={styles.line}></div>
+              )}
+            </div>
+            <div className={styles.textRight}>{item}</div>
           </div>
         );
       })}

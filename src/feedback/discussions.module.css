@@ -3,68 +3,70 @@
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem 0;
-  bottom:10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 200px; /* Adjust the value as needed */
 }
 
 .timelineItem {
-  position: relative;
+  min-height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 120px;
-  transition: opacity 0.7s ease-in-out;
-  cursor: pointer;
-}
-
-/* Draw the vertical line between circles */
-.timelineItem::before {
-  content: "";
-  position: absolute;
-  width: 2px; /* 👈 Changed from 4px to 2px for thinner line */
-  background-color: #000;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
+  gap: 50px; /* Use a small positive value instead of -20px */
 }
 
 
-.firstItem::before {
-  top: 50%; /* remove top half */
+.justifiedText {
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
 }
-
-.lastItem::before {
-  bottom: 50%; /* remove bottom half */
+/* Structure for circles and lines */
+.timelineStructure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  flex-shrink: 0;
+  position: relative;
+  margin-right: -10px;
 }
-
+/* Circle styling */
 .circle {
   width: 48px;
   height: 48px;
   background-color: #7855FA;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.labelLeft {
-  position: absolute;
-  right: calc(50% + 60px);
-  text-align: right;
-  font-size: 1.2rem;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease, font-weight 0.3s ease;
+/* Vertical line connecting circles */
+/* Shortened vertical line connecting circles */
+.line {
+  width: 2px;
+  height: 35px; /* Adjusted to be shorter */
+  background-color: black;
+  position: relative;
+  z-index: 1;
 }
 
-.labelRight {
-  position: absolute;
-  left: calc(50% + 60px);
+/* Ensure circles are closer to avoid breaks */
+
+
+/* Position the text on the right side */
+.textRight {
   font-size: 1.2rem;
   color: #333;
+  padding-left: 0;
   font-weight: 500;
   transition: color 0.3s ease, font-weight 0.3s ease;
+  flex-grow: 1;
+  margin-left: -10px; /* Change this from 8px to 0 */
 }
+
 
 /* Hover effects */
 .timelineItem:hover .circle {
@@ -72,16 +74,69 @@
   box-shadow: 0 0 12px rgba(120, 85, 250, 0.5);
 }
 
-.timelineItem:hover .labelLeft,
-.timelineItem:hover .labelRight {
+.timelineItem:hover .textRight {
   color: #7855FA;
   font-weight: 600;
 }
 
+/* Fade-in effect */
 .visible {
   opacity: 1;
 }
 
 .hidden {
   opacity: 0.3;
+}
+
+/* Side box for selected item */
+.hoverBox {
+  position: absolute;
+  right: -600px; /* Shifted to the right */
+  top: 50%; /* Adjust this if you want to move the whole box */
+  transform: translateY(-50%);
+  background-color: white;
+  border: 2px solid #7855FA;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  color: #333;
+  width: 700px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked */
+  align-items: flex-start; /* Align content to the top */
+  justify-content: flex-start; /* Move content to the top */
+  text-align: justify; /* Justify text for better readability */
+  padding-top: 20px; /* Add spacing from the top */
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Style for the heading */
+.discussionHeading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #7855FA;
+  margin-bottom: 10px; /* Space between heading and text */
+  text-align: center;
+  width: 100%;
+}
+
+.justifiedText {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: justify;
+  padding: 0 20px; /* Add side padding for better spacing */
+}
+
+/* Click effects */
+.timelineItem:active .circle {
+  transform: scale(1.2);
+  box-shadow: 0 0 16px rgba(120, 85, 250, 0.6);
+}
+
+.timelineItem:active .textRight {
+  color: #7855FA;
+  font-weight: 600;
 }
