@@ -51,6 +51,8 @@ const Discussions = () => {
 
     return () => {
       itemRefs.current.forEach((ref) => {
+
+
         if (ref) observer.unobserve(ref);
       });
     };

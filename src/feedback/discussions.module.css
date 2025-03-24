@@ -91,27 +91,28 @@
 /* Side box for selected item */
 .hoverBox {
   position: absolute;
-  right: -600px; /* Shifted to the right */
-  top: 50%; /* Adjust this if you want to move the whole box */
+  right: -500px;
+  top: 50%;
   transform: translateY(-50%);
   background-color: white;
   border: 2px solid #7855FA;
-  padding: 16px;
+  padding: 16px 20px;
   border-radius: 12px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
   font-size: 1.2rem;
   color: #333;
   width: 700px;
-  min-height: 500px;
   display: flex;
-  flex-direction: column; /* Ensure content is stacked */
-  align-items: flex-start; /* Align content to the top */
-  justify-content: flex-start; /* Move content to the top */
-  text-align: justify; /* Justify text for better readability */
-  padding-top: 20px; /* Add spacing from the top */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: justify;
   z-index: 10;
   transition: opacity 0.3s ease-in-out;
+  max-height: 80vh; /* Optional: keep it scrollable if text gets too long */
+  overflow-y: auto; /* Adds scroll if needed */
 }
+
 
 /* Style for the heading */
 .discussionHeading {

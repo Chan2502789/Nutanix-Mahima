@@ -52,9 +52,10 @@ const Feedback = () => {
               }
             >
               <div className={styles.cardHeader}>
-                <span>{item.trainer}</span>
                 <span className={styles.topic}>{item.topic}</span>
+                <span className={styles.trainer}>{item.trainer}</span>
               </div>
+
               {isSelected && <p className={styles.cardText}>{item.feedback}</p>}
             </div>
           );
